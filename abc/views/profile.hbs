@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="profileScript.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="homeStyles.css">
+</head>
+<body>
+
+    
+    <header id="homeHeader">
+        <h1>PROFILE</h1>
+
+        <a style="color:aliceblue" href="/logout" id="logout">Logout</a>
+    </header>
+    
+    <div id="userId" hidden="true">{{userId}}</div>
+    <div class="container">
+    <button class="btn followButton" rel="6"></button>
+    </div>
+    <nav class="topnav" id="navigations">
+        <a href='/profile/followers/{{userId}}'>Followers</a> 
+        <a href='/profile/following/{{userId}}'>Following</a> 
+    </nav>
+    <div class="column middle" id="profilePostDiv">
+       
+    </div>
+    
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="homeScript.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="homeStyles.css">
+</head>
+
+<body>
+    <header id="homeHeader">
+        <h1>{{user.name}}</h1>
+
+        <a style="color:aliceblue" href="/logout" id="logout">Logout</a>
+    </header>
+    <div class="topnav">
+        <h1><a href="">HOME </a></h1>
+        <h1><a href="/profile/{{user._id}}">MY PROFILE</a></h1>
+
+        <div class="search-container">
+            <form action="/profile/search" method="POST">
+                <input type="text" placeholder="Search User..." name="searchInputText" id="searchInputText">
+                <button type="submit" id="searchBtn">Search</button>
+            </form>
+        </div>
+
+    </div>
+    <div id="createPostDiv">
+        <input type="text" id="postInputText">
+        <button id="createPost">Create Post</button>
+    </div>
+    <div class="rowDiv">
+        {{!-- <div class="column side" style="background-color:#aaa;">Column</div> --}}
+        <div class="column middle" style="background-color:#bbb;" id="postDiv">
+        </div>
+    </div>
+
+</body>
+
+</html>
